@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('educational_resources', function (Blueprint $table) {
-            $table->enum('status', ['pending', 'published', 'rejected'])->default('pending')->after('resource_type');
+            $table->string('status')->default('pending');
         });
     }
 
